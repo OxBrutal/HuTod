@@ -11,12 +11,12 @@ clear
 # Fungsi untuk membuat backup dari directory pterodactyl
 installTheme(){
     cd /var/www/
-    tar -cvf nightDy.tar.gz pterodactyl
+    tar -cvf HuTod.tar.gz pterodactyl
     echo "Memasang tema...tunggu ya"
     cd /var/www/pterodactyl
-    rm -r nightDy
-    git clone https://github.com/mufniDev/nightDy.git
-    cd nightDy
+    rm -r HuTod
+    git clone https://github.com/OxBrutal/HuTod.git
+    cd HuTod
     rm /var/www/pterodactyl/resources/scripts/mufniDev.css
     rm /var/www/pterodactyl/resources/scripts/index.tsx
     mv index.tsx /var/www/pterodactyl/resources/scripts/index.tsx
@@ -57,8 +57,8 @@ repair(){
 restoreBackUp(){
     echo "Memulihkan cadangan..."
     cd /var/www/
-    tar -xvf nightDy.tar.gz
-    rm nightDy.tar.gz
+    tar -xvf HuTod.tar.gz
+    rm HuTod.tar.gz
 
     cd /var/www/pterodactyl
     yarn build:production
